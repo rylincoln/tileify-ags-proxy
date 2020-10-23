@@ -1,5 +1,9 @@
 (function(){
-  var base_layer = new L.TileLayer('https://{s}.tiles.mapbox.com/v4/base.mapbox-streets+bg-e8e8e8_scale-1_water-0.13x0.13;0.00x0.00;0.81x0.81;0.00x1.00_streets-0.08x0.08;0.00x0.00;0.11x1.00;0.00x1.00_landuse-0.10x0.10;0.00x0.00;0.76x0.98;0.00x1.00_buildings-0.08x0.08;0.00x0.00;0.11x1.00;0.00x1.00/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamNzYW5mb3JkIiwiYSI6InRJMHZPZFUifQ.F4DMGoNgU3r2AWLY0Eni-w', {subdomains: 'abcd'});
+  var base_layer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+
   var map_options = {
     center: [35.0556188, -80.664826],
     zoom: 17,
